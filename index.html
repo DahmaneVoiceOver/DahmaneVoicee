@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dahmane Voice Over | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+</head>
+<body>
+  <!-- Particles background -->
+  <div id="particles-js"></div>
+
+  <!-- HEADER -->
+  <header>
+    <div class="site-name">Dahmane Voice Over</div>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#pricing">Prices</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- HOME -->
+  <section id="home" class="section fade-in">
+    <div class="blur-box">
+      <h2>🎙️ Voice-over in Arabic, Darja & French</h2>
+      <p>
+        🎶 Warm, clear and professional voice for commercials, videos and more.<br>
+        Give impact to your brand.
+      </p>
+      <p dir="rtl" style="text-align:right;">
+        🎶 صوت دافئ، واضح واحترافي للإعلانات والفيديوهات وأكثر.<br>
+        خلّي صوت علامتك يبان ويأثر.
+      </p>
+    </div>
+  </section>
+
+  <!-- PORTFOLIO -->
+  <section id="portfolio" class="section fade-in">
+    <div class="blur-box">
+      <h2>🎧 البعض من محفظة اعمالنا</h2>
+
+      <p>Example 1:</p>
+      <audio controls>
+        <source src="example1.mp3" type="audio/mpeg" />
+        Your browser does not support the audio element.
+      </audio>
+      <div class="actions">
+        <a class="btn wa-btn" href="https://wa.me/213540376239" target="_blank"
+           rel="noopener" data-msg="السلام عليكم اريد طلب تعليق صوتي ❤️">WhatsApp</a>
+      </div>
+
+      <p style="margin-top:16px;">Example 2:</p>
+      <audio controls>
+        <source src="example2.mp3" type="audio/mpeg" />
+      </audio>
+      <div class="actions">
+        <a class="btn wa-btn" href="https://wa.me/213540376239" target="_blank"
+           rel="noopener" data-msg="السلام عليكم اريد طلب تعليق صوتي ❤️">WhatsApp</a>
+      </div>
+
+      <p style="margin-top:16px;">Example 3:</p>
+      <audio controls>
+        <source src="example3.mp3" type="audio/mpeg" />
+      </audio>
+      <div class="actions">
+        <a class="btn wa-btn" href="https://wa.me/213540376239" target="_blank"
+           rel="noopener" data-msg="السلام عليكم اريد طلب تعليق صوتي ❤️">WhatsApp</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section id="pricing" class="section fade-in">
+    <div class="blur-box">
+      <h2>💰 Pricing</h2>
+      <ul>
+        <li>
+          ▫️ حتى 30 ثانية — 750 DA
+          <a class="btn wa-btn" href="https://wa.me/213540376239" target="_blank"
+             rel="noopener" data-msg="السلام عليكم اريد طلب تعليق صوتي ❤️">WhatsApp</a>
+        </li>
+        <li>
+          ▫️ حتى 60 ثانية — 1300 DA
+          <a class="btn wa-btn" href="https://wa.me/213540376239" target="_blank"
+             rel="noopener" data-msg="السلام عليكم اريد طلب تعليق صوتي ❤️">WhatsApp</a>
+        </li>
+      </ul>
+      <p>📩 بالنسبة للشركات او معاملات معنا على المدى الطويل:<br>نوفر لكم عروض خاصة بمساركم.</p>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section fade-in">
+    <div class="blur-box">
+      <h2>📞 Contact</h2>
+
+      <!-- CTA text in Arabic -->
+      <p class="cta" dir="rtl" style="text-align:right;">
+        💬 حاب تبين صوت علامتك ولا مشروعك؟ تواصل معايا ديركت و نعاونك نوصلو رسالتك باحترافية.
+      </p>
+
+      <div class="actions">
+        <a class="btn wa-btn" href="https://wa.me/213540376239" target="_blank"
+           rel="noopener" data-msg="السلام عليكم اريد طلب تعليق صوتي ❤️">WhatsApp</a>
+        <a class="btn" href="mailto:dahmanevoiceover@gmail.com">Email</a>
+        <a class="btn" href="https://www.instagram.com/dahmane.voixoff/" target="_blank"
+           rel="noopener" style="background: linear-gradient(45deg,#f58529,#d62976,#962fbf,#4f5bd5);">
+           Instagram</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/213540376239" target="_blank" class="floating-wa" title="Chat on WhatsApp">💬</a>
+
+  <!-- SCRIPTS -->
+  <script>
+    // Load particles
+    particlesJS.load('particles-js', 'particles.json', function () {
+      console.log('particles.js loaded');
+    });
+
+    // WhatsApp encoding
+    (function () {
+      var base = 'https://wa.me/213540376239';
+      document.querySelectorAll('.wa-btn').forEach(function (a) {
+        var msg = a.getAttribute('data-msg') || 'السلام عليكم اريد طلب تعليق صوتي ❤️';
+        a.href = base + '?text=' + encodeURIComponent(msg);
+      });
+    })();
+
+    // Fade-in on scroll
+    const faders = document.querySelectorAll('.fade-in');
+    const appearOptions = { threshold: 0.2 };
+    const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add('appear');
+        observer.unobserve(entry.target);
+      });
+    }, appearOptions);
+
+    faders.forEach(fader => appearOnScroll.observe(fader));
+  </script>
+</body>
+</html>
